@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import org.apache.poi.util.SystemOutLogger;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -62,21 +62,19 @@ public class AssignmentNykaa
 
 			// click on category
 			driver.findElement(By.xpath("//span[text()='Category']")).click();
-
+			Thread.sleep(3000);
+			
 			// click on Hair
 			builder.click(driver.findElement(By.xpath("//span[text()='Hair']/following-sibling::span"))).perform();
 
-			Thread.sleep(3000);
-
 			// Click Haircare
 			builder.click(driver.findElement(By.xpath("//span[text()='Hair Care']/following-sibling::span"))).perform();
-
+				
 			// select shampoo
 			builder.click(driver.findElement(By.xpath("//span[text()='Shampoo']/following-sibling::span"))).perform();
 
 			Thread.sleep(3000);
-			builder.click(driver.findElement(By.xpath("//span[text()='Concern']/following-sibling::div/div")))
-					.perform();
+			builder.click(driver.findElement(By.xpath("//span[text()='Concern']/following-sibling::div/div"))).perform();
 
 			Thread.sleep(3000);
 			builder.click(driver.findElement(By.xpath("//label[contains(@for,'checkbox_Color Protection')]")))
